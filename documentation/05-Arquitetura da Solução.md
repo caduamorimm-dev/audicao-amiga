@@ -32,4 +32,4 @@ A arquitetura da solução concretizada conta com os seguintes módulos:
 
 Utilizaremos a plataforma do GitHub Pages como ambiente de hospedagem do site do projeto, e o mesmo será mantido no ambiente da URL https://caduamorim.github.io/audicaoamiga/
 
-A publicação do site no GitHub Pages será realizada através da submissão do projeto (push) via Git para o repositório remoto que estará disponível no endereço https://caduamorimm-dev.github.io/audicaoamiga/
+A publicação do site no GitHub Pages será realizada através da submissão do projeto (push) via Git para o repositório remoto que estará disponível no endereço https://caduamorimm-dev.github.io/audicao-amiga/
