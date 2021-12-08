@@ -23,7 +23,6 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 <li><a href="documentation/07-Funcionalidades do Sistema.md"> Funcionalidades do Sistema</a></li>  
 <li><a href="documentation/08-Plano de Testes de Software.md"> Plano de Testes de Software</a></li>
 <li><a href="documentation/09-Registro de Testes de Software.md"> Registro de Testes de Software</a></li>
-<li><a href="documentation/10-Apresentação do Projeto.md"> Apresentação do Projeto</a></li>
 <li><a href="documentation/11-Referências.md"> Referências</a></li>
 </ol>
 
