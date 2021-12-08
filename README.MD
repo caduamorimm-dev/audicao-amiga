@@ -1,6 +1,6 @@
 # AUDIÇÃO AMIGA
 
-[<img src="https://img.youtube.com/vi/ZtPMh6b3uTE&t=25s/maxresdefault.jpg" width="50%">](https://youtu.be/ZtPMh6b3uTE&t=25s)
+[<img src="https://img.youtube.com/vi/A0vSpypAbMo/maxresdefault.jpg" width="50%">](https://youtu.be/A0vSpypAbMo)
 
 Esse projeto tem como objetivo central a criação de um software que proporcione à pessoa com deficiência auditiva ou surda, melhor acesso às plataformas digitais que apresentam conteúdos audiovisuais, e com isso promovendo maior qualidade de vida e inclusão social, através da ampliação de sua comunicação, habilidades de seu aprendizado, trabalho e integração com a família, amigos e sociedade.
 
