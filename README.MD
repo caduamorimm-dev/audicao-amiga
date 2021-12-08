@@ -1,6 +1,6 @@
 # AUDIÇÃO AMIGA
 
-![Exemplo de UserFlow](img/icone/Logo Projeto FINAL-200.png)
+![Exemplo de UserFlow](img/icone/LogoProjetoFINAL-200.png)
 
 Esse projeto tem como objetivo central a criação de um software que proporcione à pessoa com deficiência auditiva ou surda, melhor acesso às plataformas digitais que apresentam conteúdos audiovisuais, e com isso promovendo maior qualidade de vida e inclusão social, através da ampliação de sua comunicação, habilidades de seu aprendizado, trabalho e integração com a família, amigos e sociedade.
 
