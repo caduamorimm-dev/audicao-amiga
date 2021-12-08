@@ -1,0 +1,43 @@
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vídeos pedidos</title>
+<link rel="icon" type="icon/ico" href="img/icone/icon.ico">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/novo.css">
+
+
+<div id="app" class="grid grid-cols-5"></div>
+
+<script>
+
+    // http://img.youtube.com/vi/J_T1Ef8UBoI/sddefault.jpg
+
+
+    // Object.keys(localStorage).filter(e=>e.match(/@/g))
+    
+    // x = localStorage['ok@ok.com'].split(",").map(e=>`http://img.youtube.com/vi/${e}/sddefault.jpg`)
+
+    // x = localStorage['ok@ok.com'].split(",").map(e=>`<a href='${e}'><img src='http://img.youtube.com/vi/${e}/sddefault.jpg'></a>`).join("")
+
+    // app.innerHTML = x
+
+    ar = []
+    for(i of Object.keys(localStorage).filter(e=>e.match(/@/g))){
+        x = localStorage[i].split(",")
+        for(j of x){
+            youtube_id = j.split("=")[1]
+
+            ar.push(youtube_id)
+        }
+    }
+
+    z = ar.map(e=>`<a href='https://www.youtube.com/watch?v=${e}'><img class="w-full" src='http://img.youtube.com/vi/${e}/sddefault.jpg'></a>`).join("")
+
+    app.innerHTML = z
+
+</script>

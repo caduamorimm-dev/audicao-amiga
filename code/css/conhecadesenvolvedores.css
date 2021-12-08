@@ -1,0 +1,180 @@
+
+/* @import url("css/novo.css"); */
+
+body{
+    background-color: var(--fundo-1) !important;
+}
+
+.header{
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 15px 15px;
+    padding: 100px 90px;
+    position: fixed;
+    transition: 2s;
+    z-index: 100;
+    width: 100%;
+    top: 0px;
+    text-align: center;
+}
+
+section {
+	max-width: 1400px;
+	margin: 0px auto 20px auto;
+}
+
+section::before, section::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.two-colors{
+    font-size: 50px;
+    background: #FE9298;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    font-family: Arial;
+}
+
+.two-colors2{
+    font-size: 50px;
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    font-family: Arial;
+}
+
+.container-fluid{
+    margin: 40px;
+}
+
+.foto{
+    width: 120px;
+    height: 120px;
+    margin-left: 40px;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+.icone1{
+    width: 25px;
+    height: 25px;
+    margin-left: 35px;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+.icone2{
+    width: 20px;
+    height: 20px;
+    margin-left: 25px;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+.icone3{
+    width: 20px;
+    height: 20px;
+    margin-left: 25px;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+.nome{
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.funcao{
+    background: #6C63FF;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.texto{
+    font-size: 12px;
+    width: 100%;
+}
+
+.row{
+    color: white;
+    
+}
+
+hr{
+    border-top: 1px solid #434343;
+}
+
+.footer{
+    /*margin-top: -40px;
+    margin-left: auto;
+    margin-right:auto;
+    max-width: 100%;*/
+    position: relative;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center; */
+    padding-bottom: 20px;
+    padding-top: -20px;
+}
+
+.botao-voltar {
+    width: 210px;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
+    background-color: #6C63FF;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    display: block;
+    border-radius: 65px;
+    border: none;
+    padding: 5px 32px;;
+    /* margin-top: -40px; */
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.botao-voltar a:hover{
+    width: 250px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold; 
+    font-size: normal;
+    font-family: Helvetica, Arial, sans-serif;
+    margin-top: -50px;
+    margin-left:auto;
+    margin-right:auto; 
+    color: pink;
+}
+
+.imagem{
+    margin-top: 50px;
+    margin-left: 20%;
+    margin-right: auto;
+}
+
+footer > .footer{
+    margin-bottom: 5px;
+}
+
+
+@media (max-width: 576px) {
+    /*hr {
+        display: block;
+    }   */
+
+    body {
+        padding-bottom: 18px;  /*conferir*/
+        width: 100%;
+    }
+}
+

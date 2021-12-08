@@ -1,0 +1,148 @@
+body,
+ul,
+li,
+p {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  font-size: 1.2rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+body{
+    background-color: #434D66;
+}
+
+.collections {
+    display: flex;           
+    justify-content: space-between; 
+    /* align-items: center;    */
+    margin-top: 100px;
+}
+
+
+/* MAIN COLLECTIONS */
+.collections > .main-collections {
+    width: 100%;
+}
+
+.collections > .main-collections > form {
+    display: flex;
+    width: 100%;
+}
+
+.collections > .main-collections > form > input {
+    width: 100%;
+    margin: 0px 0 10px 20px;
+    border: none;
+    padding: 10px;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+
+.collections > .main-collections > form > button {
+    margin: 0 0 10px 0;
+    border: none;
+    background-color: #1167b1;
+    color: white;
+    cursor: pointer;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+
+.collections > .main-collections > div > h1 {
+    color: white;
+    text-align: center;
+}
+
+.collections > .main-collections > div > div {
+    background-color: white;
+    padding: 16px;
+    border-radius: 16px;
+    width: 100%;
+}
+.collections > .main-collections > div > div > img {
+    width: 100%;
+}
+
+
+/* SECOND COLLECTIONS */
+.collections > .second-collections  {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    justify-content: flex-end;
+    align-items: center;   
+}
+
+.collections > .second-collections > a {
+    color: white;
+    padding: 0 60px;
+    cursor: pointer;
+    width: 210px;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
+    background-color: #323535;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    display: block;
+    border-radius: 65px;
+    border: none;
+    padding: 5px 32px;
+    margin-top: -40px;
+    margin-left: auto;
+    margin-right: 60px;
+}
+
+.collections > .second-collections > div {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;   
+}
+  
+.collections > .second-collections > div > div {
+    background-color: white;
+    padding: 16px;
+    border-radius: 16px;
+    max-width: 300px;
+    flex: 1 1 300px;
+    margin: 10px;
+}
+
+.collections > .second-collections > div > div > img {
+    width: 100%;
+}
+
+
+
+/* RESPONSIVE */
+@media (max-width: 576px) {
+    .collections {
+        display: block;           
+    }
+    /* MAIN COLLECTIONS */
+    .collections > .main-collections > form > input {
+        margin: 0 0 10px 6px;
+    }
+    .collections > .main-collections > form > button {
+        margin: 0 6px 10px 0;
+    }
+
+    .collections > .main-collections > div > div {
+        padding: 0;
+        border-radius: 0;
+    }
+
+
+    /* SECOND COLLECTIONS */
+    .collections > .second-collections > a {
+        padding-right: 18px;
+    }
+}
+

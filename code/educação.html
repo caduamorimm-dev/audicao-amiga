@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+          <meta charset="UTF-8">
+          <title>Vídeos Traduzidos</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="css/normalize.css">
+          <link rel="stylesheet" href="css/reset.css">
+          <link rel="stylesheet" href="css/videostraduzidos.css">
+          <link rel="stylesheet" href="css/style.css">
+          <link rel="icon" type="icon/ico" href="img/icone/icon.ico">
+    </head>
+
+      <body>
+            <div class="main">
+                  <div class="barralateral" id="barralateral">
+                        
+                        <div class="mask" style="z-index: -1;"></div>
+
+                        <div class="content" style="z-index: 4">
+<!-- logo -->
+                            <div class="separador flex flex-col flex-center">
+                              <img src="img/icone/LogoProjetoFINAL-200.png" alt="logo">
+                              <a href="formulario.html" class="btn2">SOLICITAR VÍDEO</a>
+                            </div>
+                            <div class="separador">
+                                  <ul class="menu_lateral">
+                                        <li><a href="comedia.html">Comédia</a></li>
+                                        <li><a href="documentário.html">Documentário</a></li>
+                                        <li><a href="entretenimento.html">Entretenimento</a></li>
+                                        <li><a href="educação.html">Educação</a></li>
+                                        <li><a href="tecnologia.html">Tecnologia</a></li>
+                                        <li><a href="viagens.html">Viagens</a></li>
+                                  </ul>
+                            </div>
+
+                            <div class="separador">
+                              <ul class="menu_lateral">
+                                    <li><a href="sobreoprojeto.html">Sobre o projeto</a></li>
+                                    <li><a href="conheçaosdesenvolvedores.html">Desenvolvedores</a></li>
+                              </ul>
+                        </div>
+                        </div>
+
+                        <button type="button" onclick="abrir_menu()" class="menu_opener" style="z-index: 999">
+
+                        </button>
+                  </div>
+
+<!-- pagina principal -->
+                  <div class="principal flex flex-col">
+                        <div class="blocos_principal _super_input">
+                              <form method="GET">
+                                    <div class="super_input" id="super_input">
+                                          <input type="text" onfocusin="search_focus_in()" onfocusout="search_focus_out()"/>
+                                          <button type="submit">GO</button>
+                                    </div>
+                              </form>
+                        </div>
+
+                        <div class="blocos_principal">
+                            <h1 class="bloco_titulo">Educação</h1>
+                              
+                              <div class="grid grid-row grid-5 xl-grid-4 md-grid-3 sm-grid-2 xsm-grid-1">
+                                    <a href="#" class="link_video">
+                                          <img src="img/ult/video.png" alt="video #1"/>
+                                    </a>
+                                    <a href="#" class="link_video">
+                                          <img src="img/ult/video.png" alt="video #2"/>
+                                    </a>
+                                    <a href="#" class="link_video">
+                                          <img src="img/ult/video.png" alt="video #3"/>
+                                    </a>
+                                    <a href="#" class="link_video">
+                                          <img src="img/ult/video.png" alt="video #4"/>
+                                    </a>
+                                    <a href="#" class="link_video">
+                                          <img src="img/ult/video.png" alt="video #4"/>
+                                    </a>
+                              </div>
+                              
+                        </div>
+
+                        <div class="blocos_principal">
+                              
+                            <div class="grid grid-row grid-5 xl-grid-4 md-grid-3 sm-grid-2 xsm-grid-1">
+                                  <a href="#" class="link_video">
+                                        <img src="img/ult/video.png" alt="video #1"/>
+                                  </a>
+                                  <a href="#" class="link_video">
+                                        <img src="img/ult/video.png" alt="video #2"/>
+                                  </a>
+                                  <a href="#" class="link_video">
+                                        <img src="img/ult/video.png" alt="video #3"/>
+                                  </a>
+                                  <a href="#" class="link_video">
+                                        <img src="img/ult/video.png" alt="video #4"/>
+                                  </a>
+                                  <a href="#" class="link_video">
+                                        <img src="img/ult/video.png" alt="video #4"/>
+                                  </a>
+                            </div>
+
+                            
+                      <div class="blocos_principal">
+                            
+                          <div class="grid grid-row grid-5 xl-grid-4 md-grid-3 sm-grid-2 xsm-grid-1">
+                                <a href="#" class="link_video">
+                                      <img src="img/ult/video.png" alt="video #1"/>
+                                </a>
+                                <a href="#" class="link_video">
+                                      <img src="img/ult/video.png" alt="video #2"/>
+                                </a>
+                                <a href="#" class="link_video">
+                                      <img src="img/ult/video.png" alt="video #3"/>
+                                </a>
+                                <a href="#" class="link_video">
+                                      <img src="img/ult/video.png" alt="video #4"/>
+                                </a>
+                                <a href="#" class="link_video">
+                                      <img src="img/ult/video.png" alt="video #4"/>
+                                </a>
+                          </div>                     
+                      </div>
+                </div>
+        </div>
+                              
+                        </div>
+                  </div>
+          </div>
+
+          <script>
+var menuOpen = false;
+function abrir_menu()
+{
+      var menu = document.getElementById("barralateral");
+      if (menuOpen === true)
+      {
+            menuOpen = false;
+            menu.classList.remove("menu_aberto")
+      }
+      else
+      {
+            menuOpen = true;
+            menu.classList.add("menu_aberto");
+      }
+}
+
+function search_focus_in(){document.getElementById("super_input").classList.add("super_input_focus");}
+function search_focus_out(){document.getElementById("super_input").classList.remove("super_input_focus");}
+          </script>
+    </body>
+</html>
