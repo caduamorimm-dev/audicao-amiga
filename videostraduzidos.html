@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+          <meta charset="UTF-8">
+          <title>Vídeos Traduzidos</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="css/normalize.css">
+          <link rel="stylesheet" href="css/reset.css">
+          <link rel="stylesheet" href="css/videostraduzidos.css">
+          <link rel="stylesheet" href="css/style.css">
+          <link rel="stylesheet" href="css/novo.css">
+          <link rel="icon" type="icon/ico" href="img/icone/icon.ico">
+    </head>
+
+      <body>
+            <div class="main">
+                  <div class="barralateral" id="barralateral">
+                        
+                        <div class="mask" style="z-index: -1;"></div>
+
+                        <div class="content" style="z-index: 4">
+<!-- logo -->
+                            <div class="separador flex flex-col flex-center">
+                              <img src="img/icone/LogoProjetoFINAL-200.png" alt="logo">
+                              <a href="formulario.html" class="btn2">SOLICITAR VÍDEO</a>
+                            </div>
+                            <div class="separador">
+                                  <ul class="menu_lateral">
+                                        <li><a href="#">Comédia</a></li>
+                                        <li><a href="#">Documentário</a></li>
+                                        <li><a href="#">Entreterimento</a></li>
+                                        <li><a href="#">Educação</a></li>
+                                        <li><a href="#">Tecnologia</a></li>
+                                        <li><a href="#">Viagens</a></li>
+                                  </ul>
+                            </div>
+
+                            <div class="separador">
+                              <ul class="menu_lateral">
+                                    <li><a href="sobreoprojeto.html">Sobre o projeto</a></li>
+                                    <li><a href="conhecadesenvolvedores.html">Desenvolvedores</a></li>
+                              </ul>
+                        </div>
+                        </div>
+
+                        <button type="button" onclick="abrir_menu()" class="menu_opener" style="z-index: 999">
+
+                        </button>
+                  </div>
+
+<!-- pagina principal -->
+                  <div class="principal flex flex-col">
+                        <div class="blocos_principal _super_input">
+                              <form method="GET">
+                                    <div class="super_input" id="super_input">
+                                          <input type="text" onfocusin="search_focus_in()" onfocusout="search_focus_out()"/>
+                                          <button type="submit">GO</button>
+                                    </div>
+                              </form>
+                        </div>
+
+
+                        <div class="blocos_principal">
+
+                              <h1 class="bloco_titulo">Comédia</h1>
+                              <div class="grid grid-cols-3 grid-gap-1" id="list_comedia"></div>
+
+                              <h1 class="bloco_titulo">Documentário</h1>
+                              <div class="grid grid-cols-3 grid-gap-1" id="list_doc"></div>
+                              
+                        </div>
+                             
+                        </div>
+                  </div>
+          </div>
+
+          <script>
+var menuOpen = false;
+function abrir_menu()
+{
+      var menu = document.getElementById("barralateral");
+      if (menuOpen === true)
+      {
+            menuOpen = false;
+            menu.classList.remove("menu_aberto")
+      }
+      else
+      {
+            menuOpen = true;
+            menu.classList.add("menu_aberto");
+      }
+}
+
+function search_focus_in(){document.getElementById("super_input").classList.add("super_input_focus");}
+function search_focus_out(){document.getElementById("super_input").classList.remove("super_input_focus");}
+          </script>
+    </body>
+</html>
+
+<script>
+
+      links_comedia = `https://www.youtube.com/watch?v=XsQxZmnT40w,
+      https://www.youtube.com/watch?v=TTcxXfuPFeM,
+      https://www.youtube.com/watch?v=QQINgrVsdbQ,
+      https://www.youtube.com/watch?v=eDHKhLjyIGw,
+      https://www.youtube.com/watch?v=evJuSa3xWyc,
+      https://www.youtube.com/watch?v=qqPRmXmt6Ks,
+      https://www.youtube.com/watch?v=c-OSnNFIPbI,
+      https://www.youtube.com/watch?v=vPkVP2gTkLA,
+      https://www.youtube.com/watch?v=BOdDN8GNc2U`
+      
+      links_comedia = links_comedia.split("\,").map(e=>e.trim()).map(e=>e.split("=")[1])
+      
+      
+
+      links_doc = `https://www.youtube.com/watch?v=mRMu07sn88g,
+      https://www.youtube.com/watch?v=q1RoiuhrFyM,
+      https://www.youtube.com/watch?v=VbPvH515KoY,
+      https://www.youtube.com/watch?v=uuBFU69h05k,
+      https://www.youtube.com/watch?v=q1B6bVXb0Cw,
+      https://www.youtube.com/watch?v=jTCvpO7OlVQ,
+      https://www.youtube.com/watch?v=9BTyx51jVrI,
+      https://www.youtube.com/watch?v=In9U80IO5fI,
+      https://www.youtube.com/watch?v=qB-J8-xPOng`
+
+      links_doc = links_doc.split("\,").map(e=>e.trim()).map(e=>e.split("=")[1])
+
+      // <iframe class="w-full rounded" src="https://www.youtube.com/embed/yfR73cjcUVA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      // list_comedia
+
+      function popular(div, ar){
+            ar.map(e=>{
+                  // div.innerHTML += `<iframe class="w-full rounded" src="https://www.youtube.com/embed/${e}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+
+                  div.innerHTML += `<a href='playervideostraduzidos.html?url=${e}'><img src='http://img.youtube.com/vi/${e}/sddefault.jpg' class="w-full rounded"></a>`
+                  
+                  // http://img.youtube.com/vi/J_T1Ef8UBoI/sddefault.jpg
+
+            })
+      }
+
+      popular(list_comedia, links_comedia)
+
+      popular(list_doc, links_doc)
+
+</script>
