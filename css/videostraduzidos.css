@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* SCROLL BAR */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #7a7979;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #FE9298;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+
+/* BARRA LATERAL */
+
+.barralateral{
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0; 
+    left:0;
+    z-index:999;
+}
+.barralateral>.mask
+{
+    position: fixed;
+    top:0;left:0;right:0;bottom:0;
+    background-color:#000;
+    opacity:0;
+    transition: opacity ease-in-out 200ms;
+    display: none;
+}
+.barralateral>.content
+{
+    width: 300px;
+    height:100%;
+    background: #040B18;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0px 8px 10px #00000075; 
+    transition: margin ease-in-out 0.2s, box-shadow ease-in-out 0.2s;  
+}
+
+.barralateral>.menu_opener
+{
+    display: none;
+
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    background-image: url("../img/ult/menurespon.svg");
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: center;
+    mask-image: url("../img/ult/menurespon.svg");
+    background-color: #FE9298;
+    box-shadow: -3px 3px 3px #00000075;
+    border-radius: 50px;
+}
+.barralateral>.content
+{
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+}
+.separador
+{
+    padding: 20px 5px 50px 10px;
+    border-bottom: 1px solid #222936;
+}
+.separador:last-child
+{
+    border-bottom: 0;
+    padding-bottom: 20px;
+}
+ul.menu_lateral
+{
+    list-style: none;
+    margin-left: 15px;
+    border-left: 2px solid #FE9298;
+}
+ul.menu_lateral>li
+{
+    padding: 5px 0 5px 8px;
+}
+ul.menu_lateral>li>a
+{
+    color: white;
+    font-weight: bold;
+    transition: margin ease-in-out 200ms;
+}
+ul.menu_lateral>li>a:hover
+{
+    margin-left: 5px;
+}
+
+.principal
+{
+    margin-left: 320px;
+    padding-top: 20px;
+    padding: 20px 10px 0;
+}
+
+.blocos_principal._super_input
+{
+    display: flex;
+    flex-direction: row-reverse;
+    /* margin-right:30px; */
+    margin-left: 50px;
+
+}
+.blocos_principal._super_input>form{display:flex;flex:0 0; }
+
+.super_input
+{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+    --border-radius: 15px;
+}
+.blocos_principal._super_input>form,.super_input{max-width:300px;}
+.super_input>input[type=text]
+{
+    flex:1;
+    display:flex;
+}
+.super_input>input,.super_input>button
+{
+    background-color: #6C63FF;
+    padding: 10px 20px;
+    border: 1px solid #2F345D;
+}
+.super_input>button
+{
+    padding: 10px;
+    border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    border-left:0;
+
+    color: transparent;
+
+    cursor: pointer;
+
+    background-image: url(../img/ult/search.svg);
+    background-size: 25px 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.super_input>input
+{
+    background-color: #5355A2;
+    border-top-left-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+    display:inline-block;
+}
+.super_input::before
+{
+    content: '';
+    position: absolute;
+    top:0;left:0;right:0;bottom:0;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px #00000075;
+    z-index:-1;
+    transition: box-shadow ease-in-out 200ms;
+}
+.super_input.super_input_focus::before
+{
+    box-shadow: 0 0 10px #ffffffc4;
+}
+.blocos_principal:not(._super_input)
+{
+    margin-top: 50px;
+}
+.link_video
+{
+    flex:1;
+    width: auto;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.link_video>img
+{
+    width:100%;
+    object-fit: fill;
+}
+.bloco_titulo
+{
+    font-size: 300%;
+    color: white;
+    font-weight: 600;
+    margin: 20px 10px 20px 10px;
+}
+
+
+
+
+
+
+@media (max-width: 900px)
+{
+    .barralateral.menu_aberto>.mask
+    {
+        display: block;
+        right: 0;
+        opacity: 0.5;
+    }
+    .barralateral>.content
+    {
+        margin-left: -300px;
+    }
+    .barralateral>.menu_opener
+    {
+        display: block;
+    }
+    .barralateral.menu_aberto>.content
+    {
+        margin-left: 0;
+    }
+    .barralateral:not(.menu_aberto)>.content{box-shadow: none;}
+    .principal{margin-left:0;}
+}
